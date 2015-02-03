@@ -3,9 +3,9 @@
     package="mobilike.example.com.seamlessandroiddemo" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,25 +23,45 @@
         </activity>
         <activity
             android:name=".SimpleVideoActivity"
+            android:configChanges="screenSize|orientation"
             android:label="@string/title_activity_simple_video"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:configChanges="screenSize|orientation">
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
         </activity>
-
-        <activity android:name="com.mobilike.seamless.mopub.mobileads.MoPubActivity"
+        <activity
+            android:name="com.mobilike.seamless.mopub.mobileads.MoPubActivity"
             android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="com.mobilike.seamless.mopub.mobileads.MraidActivity"
+        <activity
+            android:name="com.mobilike.seamless.mopub.mobileads.MraidActivity"
             android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="com.mobilike.seamless.mopub.common.MoPubBrowser"
+        <activity
+            android:name="com.mobilike.seamless.mopub.common.MoPubBrowser"
             android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="com.mobilike.seamless.mopub.mobileads.MraidVideoPlayerActivity"
+        <activity
+            android:name="com.mobilike.seamless.mopub.mobileads.MraidVideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="com.facebook.ads.InterstitialAdActivity"
+        <activity
+            android:name="com.facebook.ads.InterstitialAdActivity"
             android:configChanges="keyboardHidden|orientation" />
-        <activity android:name="com.google.android.gms.ads.AdActivity"
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <meta-data android:name="com.google.android.gms.version"
+
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".SDTableActivity"
+            android:label="@string/title_activity_sdtable" >
+        </activity>
+        <activity
+            android:name=".SDFullPageAdActivity"
+            android:label="@string/title_activity_sdfull_page_ad" >
+        </activity>
+        <activity
+            android:name=".SDBannerActivity"
+            android:label="@string/title_activity_sdbanner" >
+        </activity>
     </application>
 
 </manifest>

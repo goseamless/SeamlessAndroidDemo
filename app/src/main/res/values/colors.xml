@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="color1" type="color">#DA3D30</item>
+    <item name="color2" type="color">#EB5F32</item>
+    <item name="color3" type="color">#E97A36</item>
+    <item name="color4" type="color">#FAC03E</item>
+    <item name="color5" type="color">#9DB64D</item>
+    <item name="color6" type="color">#57B64D</item>
+    <item name="color7" type="color">#33AEB6</item>
+    <item name="color8" type="color">#2F5870</item>
+
+</resources>

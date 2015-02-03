@@ -15,7 +15,6 @@ import com.mobilike.seamless.SeamlessConfig;
 
 public class SDMainActivity extends Activity {
 
-    //private ArrayAdapter<String> listAdapter;
     private SDListAdapter listAdapter;
     ListView mListView;
 
@@ -26,7 +25,7 @@ public class SDMainActivity extends Activity {
         SeamlessConfig.setAppToken("5e7eded8-a6e8-4556-b301-710cbb61d4a9", getApplicationContext());
 
         TextView versionCodeView = (TextView) findViewById(R.id.version_code);
-        versionCodeView.setText("SDK Version 1.4.0");
+        versionCodeView.setText("SDK Version 1.5.2");
 
         mListView = (ListView) findViewById(R.id.scenario_list);
 
@@ -34,19 +33,30 @@ public class SDMainActivity extends Activity {
                 "Multiple Interstitial Request", "Banner for all screens", "Resizing View for Banner",
                 "MRE inside a scroll view", "Simple Video Player", "Text 2", "Text3", "Text 4"};*/
 
-        String[] scenarios = new String[] {"Simple Video Player"};
+        String[] scenarios = new String[] {"Asynchronous Data Fetch","Refresh and Paging", "Multiple Interstitial Request",
+                "Banner for All Screens", "Simple Video Player", "More To Come..."};
 
         listAdapter = new SDListAdapter(this, R.layout.simple_row, scenarios);
         mListView.setAdapter(listAdapter);
-       // listAdapter.notifyDataSetChanged();
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        Intent intent = new Intent(SDMainActivity.this, SimpleVideoActivity.class);
-                        startActivity(intent);
+
+                if (position == 0){ // Asynchronous data fetch
+                    Intent i = new Intent(SDMainActivity.this, SDTableActivity.class);
+                    i.putExtra("MakeButtons", false);
+                    startActivity(i);
+                }else if (position == 1){ // Refresh and Paging
+                    Intent i = new Intent(SDMainActivity.this, SDTableActivity.class);
+                    i.putExtra("MakeButtons", true);
+                    startActivity(i);
+                }else if (position == 2){ // Multiple Insterstitial Request
+                    startActivity(new Intent(SDMainActivity.this, SDFullPageAdActivity.class));
+                }else if (position == 3){ // Banner for all screens
+                    startActivity(new Intent(SDMainActivity.this, SDBannerActivity.class));
+                }else if (position == 4){ // Simple Video Player
+                    startActivity(new Intent(SDMainActivity.this, SimpleVideoActivity.class));
                 }
             }
         });
@@ -74,5 +84,6 @@ public class SDMainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 }

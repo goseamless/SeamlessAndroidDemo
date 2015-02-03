@@ -16,18 +16,11 @@
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okio-1.2.0-d8d7cbcc1c85180857f072f39914789508a788fd.jar" />
     </item>
     <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.4.0/libs/AudienceNetwork.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="beb2bcf76cab97db40eeaac14171b28b378dcdc4">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/AudienceNetwork-36eba19e79e2de19bc33a6a980328ff8ce5037e9.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.4.0/libs/liverail-admanager.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/liverail-admanager.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="aeb45a148e6cf9b7657b806f6dfbc25ec790f2da">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/liverail-admanager-2ecd7adb8ab19e8bb017078f0139a548e64737d2.jar" />
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/liverail-admanager-f38b4f73d6d01b51b274f0162f3ab8194a360fee.jar" />
     </item>
     <item
         jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
@@ -44,11 +37,11 @@
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-59eb29b604979ab03065d927e9f63536355de326.jar" />
     </item>
     <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.4.0/libs/MMSDK.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/MMSDK.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="0caf3cd39dfd94dc3095e335d0b1ec9b7069b54e">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/MMSDK-3fa08f542cfbd66a11e0abbb68f6dfb7b78e1e1f.jar" />
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/MMSDK-47358a199af7db692ca8b944a40c99af5868c69a.jar" />
     </item>
     <item
         jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
@@ -72,6 +65,20 @@
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-10e4a4e887c8a9612254bec9f2cb5cd143811306.jar" />
     </item>
     <item
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/AudienceNetwork.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="beb2bcf76cab97db40eeaac14171b28b378dcdc4">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/AudienceNetwork-f9624d5e5af923f0b09c44300697e00c3e6dffa0.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="124ce18dcf1487fde7028beae7ce4dd0cffc2905">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-ddbc981541145fff5580c67be8a5305ad992a755.jar" />
+    </item>
+    <item
         jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -86,11 +93,11 @@
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-02b86b969eabb2391566cb6e2feccf79fd12c42a.jar" />
     </item>
     <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.4.0/classes.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="869657a39e186cdf0e84ab1c79b409fac5d36ffb">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-0775bcea4656ac6c3c9f7582a4c6b5e11d58c366.jar" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-d1460e394e15403c2f6cfa0f46bc6d016f977226.jar" />
     </item>
     <item
         jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
@@ -98,13 +105,6 @@
         revision="21.1.1"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-441d471c5f8a8524e5f51ab99ecb206709d66a1e.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-d1460e394e15403c2f6cfa0f46bc6d016f977226.jar" />
     </item>
 
 </items>
