@@ -19,11 +19,16 @@ public class SDBannerActivity extends ActionBarActivity {
 
     SeamlessMMAView mAdView;
     WebView webView;
+    BannerManager bannerManager;
+    Utility util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sdbanner);
+
+        util = Utility.newInstance();
+        util.saveActivity(this);
 
         mAdView  = (SeamlessMMAView) findViewById(R.id.adView);
         webView = (WebView) findViewById(R.id.webView);
@@ -34,20 +39,24 @@ public class SDBannerActivity extends ActionBarActivity {
         BannerManagerListener bannerManagerListener = new BannerManagerListener() {
             @Override
             public void onBannerLoad(FrameLayout bannerView) {
-                mAdView.setVisibility(View.VISIBLE);
-                mAdView.removeAllViews();
-                mAdView.addView(bannerView);
-                Toast.makeText(getApplicationContext(), "Banner ad loaded", Toast.LENGTH_SHORT).show();
+                if (util.activityIsAlive()) {
+                    mAdView.setVisibility(View.VISIBLE);
+                    mAdView.removeAllViews();
+                    mAdView.addView(bannerView);
+                    Toast.makeText(getApplicationContext(), "Banner ad loaded", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onBannerFailed(FrameLayout bannerView, String error) {
-                mAdView.setVisibility(View.GONE);
-                Toast.makeText(getApplicationContext(), "Banner ad failed", Toast.LENGTH_SHORT).show();
+                if (util.activityIsAlive()) {
+                    mAdView.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(), "Banner ad failed", Toast.LENGTH_SHORT).show();
+                }
             }
         };
 
-        BannerManager bannerManager = new BannerManager.Builder(this)
+        bannerManager = new BannerManager.Builder(this)
                 // Should specify your current content like "yourapp-yourcontent-adtype"
                 // i.e : "yourapp-sports-banner"
                 .entity("seamless-simple-banner")
@@ -57,6 +66,13 @@ public class SDBannerActivity extends ActionBarActivity {
                 .build();
     }
 
+    @Override
+    protected void onDestroy() {
+        if (bannerManager != null){
+            bannerManager.destroyAd();
+        }
+        super.onDestroy();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

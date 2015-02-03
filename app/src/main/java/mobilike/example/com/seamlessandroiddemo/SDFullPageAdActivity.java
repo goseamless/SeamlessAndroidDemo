@@ -1,6 +1,5 @@
 package mobilike.example.com.seamlessandroiddemo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -20,21 +19,24 @@ public class SDFullPageAdActivity extends ActionBarActivity {
     Button loadButton;
     InterstitialManagerListener intersititalManagerListener;
     InterstitialManager interstitialManager;
-    Activity activity;
+    Utility util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sdfull_page_ad);
 
-        activity = this;
+        util = Utility.newInstance();
+        util.saveActivity(this);
 
         intersititalManagerListener = new InterstitialManagerListener() {
+            // If the Interstitial Request is successful, but the Ad is not provided by ad server,
+            // It doesn't trigger onInterstitialLoad callback. (Becasue ad is not loaded)
             @Override
             public void onInterstitialLoad(MoPubInterstitial mInterstitial, boolean isReady) {
                 Toast.makeText(getApplicationContext(), "Interstitial loaded", Toast.LENGTH_SHORT).show();
                 if(isReady) {
-                    if (activity != null && !activity.isFinishing()) {
+                    if (util.activityIsAlive()) {
                         mInterstitial.show();
                         Toast.makeText(getApplicationContext(), "Interstitial is showing", Toast.LENGTH_SHORT).show();
                     }
@@ -42,7 +44,9 @@ public class SDFullPageAdActivity extends ActionBarActivity {
             }
             @Override
             public void onInterstitialFailed(String error) {
-                Toast.makeText(getApplicationContext(), "Interstitial failed", Toast.LENGTH_SHORT).show();
+                if (util.activityIsAlive()) {
+                    Toast.makeText(getApplicationContext(), "Interstitial failed", Toast.LENGTH_SHORT).show();
+                }
             }
         };
 
@@ -64,8 +68,9 @@ public class SDFullPageAdActivity extends ActionBarActivity {
 
     @Override
     protected void onDestroy() {
-        intersititalManagerListener = null;
-        interstitialManager.destroy();
+        if (interstitialManager != null) {
+            interstitialManager.destroy();
+        }
         super.onDestroy();
     }
 

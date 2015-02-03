@@ -45,11 +45,15 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
     FeedManager feedManager;
     String entity;
     SeamlessAdapter sAdapter;
+    Utility util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sdtable);
+
+        util = Utility.newInstance();
+        util.saveActivity(this);
 
         Bundle extras = getIntent().getExtras();
         if (extras == null){
@@ -76,8 +80,10 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
             public void onAdLoad(ListAdapter adapter, AdapterView.OnItemClickListener onItemClickListener) {
                 // If ads loaded succesfully,
                 // returns an adapter that contains feed ads
-                mTableView.setAdapter(adapter);
-                sAdapter = (SeamlessAdapter) adapter;
+                if (util.activityIsAlive()) {
+                    mTableView.setAdapter(adapter);
+                    sAdapter = (SeamlessAdapter) adapter;
+                }
 
                 // If you have an OnItemClickListener on your ListView
                 // and you passed it to FeedManager.Builder
@@ -88,8 +94,10 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
             @Override
             public void onAdFailed(ListAdapter adapter){
                 // If ads fail to load, returns your own adapter
-                mTableView.setAdapter(adapter);
-                sAdapter = null;
+                if (util.activityIsAlive()) {
+                    mTableView.setAdapter(adapter);
+                    sAdapter = null;
+                }
             }
         };
 

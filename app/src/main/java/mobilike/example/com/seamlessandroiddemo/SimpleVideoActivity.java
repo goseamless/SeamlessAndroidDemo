@@ -23,10 +23,14 @@ public class SimpleVideoActivity extends ActionBarActivity {
 
     private LinearLayout videoLayout;
     private VideoView simpleVideoView;
+    Utility util;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        util = Utility.newInstance();
+        util.saveActivity(this);
+
         setContentView(R.layout.activity_simple_video);
         videoLayout = (LinearLayout) findViewById(R.id.simple_video_layout);
         simpleVideoView = (VideoView) findViewById(R.id.simple_video_view);
@@ -40,15 +44,16 @@ public class SimpleVideoActivity extends ActionBarActivity {
 
                     @Override
                     public void onEvent(VPAIDEvent event) {
+                        if (util.activityIsAlive()) {
+                            // Create container View to hold the AdView
+                            // Remove all views from the container and add the AdView
+                            videoLayout.removeAllViews();
+                            videoLayout.addView(adView);
 
-                        // Create container View to hold the AdView
-                        // Remove all views from the container and add the AdView
-                        videoLayout.removeAllViews();
-                        videoLayout.addView(adView);
-
-                        Toast.makeText(getApplicationContext(), "Video ad loaded", Toast.LENGTH_SHORT).show();
-                        // Then start the video ad
-                        adView.startAd();
+                            Toast.makeText(getApplicationContext(), "Video ad loaded", Toast.LENGTH_SHORT).show();
+                            // Then start the video ad
+                            adView.startAd();
+                        }
                     }
                 };
 
@@ -56,10 +61,12 @@ public class SimpleVideoActivity extends ActionBarActivity {
 
                     @Override
                     public void onEvent(VPAIDEvent event) {
-                        // Ad Stopped
-                        videoLayout.removeAllViews();
-                        videoLayout.addView(simpleVideoView);
-                        startVideo();
+                        if (util.activityIsAlive()) {
+                            // Ad Stopped
+                            videoLayout.removeAllViews();
+                            videoLayout.addView(simpleVideoView);
+                            startVideo();
+                        }
                     }
                 };
 
@@ -67,9 +74,11 @@ public class SimpleVideoActivity extends ActionBarActivity {
 
                     @Override
                     public void onEvent(VPAIDEvent event) {
-                        // Error
-                        Toast.makeText(getApplicationContext(), "Video ad error", Toast.LENGTH_SHORT).show();
-                        startVideo();
+                        if (util.activityIsAlive()) {
+                            // Error
+                            Toast.makeText(getApplicationContext(), "Video ad error", Toast.LENGTH_SHORT).show();
+                            startVideo();
+                        }
                     }
                 };
 
