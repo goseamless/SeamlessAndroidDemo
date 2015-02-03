@@ -32,10 +32,11 @@ public class SDFullPageAdActivity extends ActionBarActivity {
         intersititalManagerListener = new InterstitialManagerListener() {
             @Override
             public void onInterstitialLoad(MoPubInterstitial mInterstitial, boolean isReady) {
+                Toast.makeText(getApplicationContext(), "Interstitial loaded", Toast.LENGTH_SHORT).show();
                 if(isReady) {
                     if (activity != null && !activity.isFinishing()) {
                         mInterstitial.show();
-                        Toast.makeText(getApplicationContext(), "Interstitial loaded", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Interstitial is showing", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -54,7 +55,7 @@ public class SDFullPageAdActivity extends ActionBarActivity {
                         // i.e. : "yourapp-sports-fullpagelayer"
                         .entity("seamless-full-screen-ad")
                         .listener(intersititalManagerListener)
-                        .category(AdCategory.AdCategories.Uncategorised) // Select proper category eg: News, Sports etc.
+                        .category(AdCategory.AdCategories.News) // Select proper category eg: News, Sports etc.
                         .build();
 
             }

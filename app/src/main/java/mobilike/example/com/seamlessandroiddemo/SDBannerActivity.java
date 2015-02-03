@@ -52,7 +52,7 @@ public class SDBannerActivity extends ActionBarActivity {
                 // i.e : "yourapp-sports-banner"
                 .entity("seamless-simple-banner")
                 .adView("250x150") // This is OPTIONAL i.e. = "250x150"/ the size of your SeamlessMMAView
-                .category(AdCategory.AdCategories.Uncategorised) // Select proper category eg: News, Sports etc.
+                .category(AdCategory.AdCategories.Sports) // Select proper category eg: News, Sports etc.
                 .listener(bannerManagerListener)
                 .build();
     }
