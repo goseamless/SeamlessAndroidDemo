@@ -30,12 +30,12 @@ public class SDFullPageAdActivity extends ActionBarActivity {
         util.saveActivity(this);
 
         intersititalManagerListener = new InterstitialManagerListener() {
-            // If the Interstitial Request is successful, but the Ad is not provided by ad server,
-            // It doesn't trigger onInterstitialLoad callback. (Becasue ad is not loaded)
+            // Ad request is successful, but there may not be any advertisement to load
             @Override
             public void onInterstitialLoad(MoPubInterstitial mInterstitial, boolean isReady) {
                 Toast.makeText(getApplicationContext(), "Interstitial loaded", Toast.LENGTH_SHORT).show();
                 if(isReady) {
+                    // Prevent showing advertisement after the view is already popped
                     if (util.activityIsAlive()) {
                         mInterstitial.show();
                         Toast.makeText(getApplicationContext(), "Interstitial is showing", Toast.LENGTH_SHORT).show();

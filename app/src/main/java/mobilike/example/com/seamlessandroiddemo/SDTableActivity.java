@@ -80,6 +80,8 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
             public void onAdLoad(ListAdapter adapter, AdapterView.OnItemClickListener onItemClickListener) {
                 // If ads loaded succesfully,
                 // returns an adapter that contains feed ads
+
+                // Prevent showing advertisement after the view is already popped
                 if (util.activityIsAlive()) {
                     mTableView.setAdapter(adapter);
                     sAdapter = (SeamlessAdapter) adapter;
@@ -132,7 +134,8 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
     }
 
     public void processData(String[] s) {
-        if (paging){// Paging doesn't need to call FeedManager again
+        // Paging doesn't need to call FeedManager again
+        if (paging){
             int index = musicList.size();
             for (int i = 0; i < s.length; i++) {
                 index ++;
@@ -148,9 +151,9 @@ public class SDTableActivity extends ActionBarActivity implements AsyncResponse{
             setAdManager();
             mTableView.smoothScrollToPosition(0);
         }
-        if (sAdapter != null) {
+        if (sAdapter != null) {  // If Super adapter (Your adapter + Seamless) exists, notify it
             sAdapter.notifyDataSetChanged();
-        }else{
+        }else{                  // Otherwise, use your adapter.
             musicAdapter.notifyDataSetChanged();
         }
 

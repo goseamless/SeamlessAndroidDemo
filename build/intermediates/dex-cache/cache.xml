@@ -2,25 +2,18 @@
 <items version="2" >
 
     <item
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/liverail-admanager.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="aeb45a148e6cf9b7657b806f6dfbc25ec790f2da">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/liverail-admanager-f9ea5e0e0f33f663bd8edfea542a533164fdd08d.jar" />
+    </item>
+    <item
         jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/1.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="3812f89e64ae0e865df72574ffe7c5a516e1cc91">
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-444eaac38640c531700ba6684e06be22b73e8396.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.2.0/c0b52915a48fa91b1b94a28d4a2997bac5f524df/okio-1.2.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okio-1.2.0-d8d7cbcc1c85180857f072f39914789508a788fd.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/liverail-admanager.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="aeb45a148e6cf9b7657b806f6dfbc25ec790f2da">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/liverail-admanager-f38b4f73d6d01b51b274f0162f3ab8194a360fee.jar" />
     </item>
     <item
         jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
@@ -30,53 +23,39 @@
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-060e75bb8d240b5968992624894013ce3f4cc354.jar" />
     </item>
     <item
-        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.3.0/2e7bc7033dc2c8423e661224171b3133fb155b28/okhttp-2.3.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-59eb29b604979ab03065d927e9f63536355de326.jar" />
+        sha1="2e7bc7033dc2c8423e661224171b3133fb155b28">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okhttp-2.3.0-8b0394ea2d4a3ea5abb3619088c7de33461223c2.jar" />
     </item>
     <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/MMSDK.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/mopub-volley-1.0.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="0caf3cd39dfd94dc3095e335d0b1ec9b7069b54e">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/MMSDK-47358a199af7db692ca8b944a40c99af5868c69a.jar" />
+        sha1="26f5b5a49feafeaa18909c89c6d116612eafb617">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/mopub-volley-1.0.0-0b62f668212fe641f7df70b59f87d319f6f0ee5b.jar" />
     </item>
     <item
-        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okhttp-2.2.0-417151025d400d95b25337afd8937c3316a62027.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-urlconnection/2.2.0/cb20062e14c523637b7643295418097b48cccec2/okhttp-urlconnection-2.2.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="cb20062e14c523637b7643295418097b48cccec2">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-2.2.0-31210282c938150794eec62df2b11c36564a1151.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/Documents/Android Development/adt-bundle-mac-x86_64-20140702/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-10e4a4e887c8a9612254bec9f2cb5cd143811306.jar" />
-    </item>
-    <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/libs/AudienceNetwork.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/AudienceNetwork.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="beb2bcf76cab97db40eeaac14171b28b378dcdc4">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/AudienceNetwork-f9624d5e5af923f0b09c44300697e00c3e6dffa0.jar" />
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/AudienceNetwork-9a3841bd5c18172dab436d1b55034fc4629808e1.jar" />
     </item>
     <item
-        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/1.5.2/classes.jar"
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="124ce18dcf1487fde7028beae7ce4dd0cffc2905">
-        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-ddbc981541145fff5580c67be8a5305ad992a755.jar" />
+        sha1="d6a09b6e113a441b47428316789f9eb6a7211542">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/classes-489661d707251b8770884a5dccc34b435c858939.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-urlconnection/2.3.0/4f12ec1e1455909e1f0b8530c719c90b2d01745/okhttp-urlconnection-2.3.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="04f12ec1e1455909e1f0b8530c719c90b2d01745">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-2.3.0-c938ad832193de433a6247437184122314c882a1.jar" />
     </item>
     <item
         jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
@@ -98,6 +77,41 @@
         revision="21.1.1"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-d1460e394e15403c2f6cfa0f46bc6d016f977226.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/mfXerces.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="dadcdc47032ec0180679ee62ae82a70555a71987">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/mfXerces-9f2bd6996c1df08e1c322c98a2956714efd83a0b.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-75690f90224cc61ef5f1252d18a35c5f525dfc82.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/MMSDK-5.3.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0caf3cd39dfd94dc3095e335d0b1ec9b7069b54e">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/MMSDK-5.3.0-f20a0c86821e75ee16063cacda5b727cac513ce7.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/Documents/Android Development/adt-bundle-mac-x86_64-20140702/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-10e4a4e887c8a9612254bec9f2cb5cd143811306.jar" />
+    </item>
+    <item
+        jar="/Users/suzykang/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.3.0/1b355f73402020c5a0dcca58affc3ec3dfeabac1/okio-1.3.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1b355f73402020c5a0dcca58affc3ec3dfeabac1">
+        <dex dex="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/pre-dexed/debug/okio-1.3.0-80576c6e69fd3cfffa4a16a866aab4240f190919.jar" />
     </item>
     <item
         jar="/Users/suzykang/Desktop/Android Dev/SeamlessAndroidDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"

@@ -37,8 +37,10 @@ public class SDBannerActivity extends ActionBarActivity {
 
 
         BannerManagerListener bannerManagerListener = new BannerManagerListener() {
+            // Banner request is successful, but there may not be any advertisement to load
             @Override
             public void onBannerLoad(FrameLayout bannerView) {
+                // Prevent showing banner after the view is already popped
                 if (util.activityIsAlive()) {
                     mAdView.setVisibility(View.VISIBLE);
                     mAdView.removeAllViews();

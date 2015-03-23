@@ -22,44 +22,62 @@ public class SDMainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sdmain);
-        SeamlessConfig.setAppToken("5e7eded8-a6e8-4556-b301-710cbb61d4a9", getApplicationContext());
 
         TextView versionCodeView = (TextView) findViewById(R.id.version_code);
-        versionCodeView.setText("SDK Version 1.5.2");
+        versionCodeView.setText("SDK Version 1.5.3");
 
         mListView = (ListView) findViewById(R.id.scenario_list);
+        int cellHeight;
+        String[] scenarios;
 
-        /*String[] scenarios = new String[] {"Asynchronous Data Fetch", "Paging and Refresh",
-                "Multiple Interstitial Request", "Banner for all screens", "Resizing View for Banner",
-                "MRE inside a scroll view", "Simple Video Player", "Text 2", "Text3", "Text 4"};*/
+        final boolean tabletSize  = getResources().getBoolean(R.bool.isTablet);
+        if (tabletSize){
+            SeamlessConfig.setAppToken("6031d1f6-36b5-4e5f-847f-47736ab67953", getApplicationContext());
+            cellHeight = 260;
+            scenarios = new String[] {"Asynchronous Data Fetch","Refresh and Paging", "Multiple Interstitial Request",
+                    "Banner for All Screens","Banner Inside a Scroll View","Simple Video Player", "Grid View"};
+        }else {
+            SeamlessConfig.setAppToken("5e7eded8-a6e8-4556-b301-710cbb61d4a9", getApplicationContext());
+            cellHeight = 100;
+            scenarios = new String[] {"Asynchronous Data Fetch","Refresh and Paging", "Multiple Interstitial Request",
+                    "Banner for All Screens","Banner Inside a Scroll View","Simple Video Player", "Feed Ad Customization"};
+        }
 
-        String[] scenarios = new String[] {"Asynchronous Data Fetch","Refresh and Paging", "Multiple Interstitial Request",
-                "Banner for All Screens", "Simple Video Player", "More To Come..."};
-
-        listAdapter = new SDListAdapter(this, R.layout.simple_row, scenarios);
+        listAdapter = new SDListAdapter(this, R.layout.simple_row, scenarios, cellHeight);
         mListView.setAdapter(listAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position == 0){ // Asynchronous data fetch
+                if (position == 0) { // Asynchronous data fetch
                     Intent i = new Intent(SDMainActivity.this, SDTableActivity.class);
                     i.putExtra("MakeButtons", false);
                     startActivity(i);
-                }else if (position == 1){ // Refresh and Paging
+                } else if (position == 1) { // Refresh and Paging
                     Intent i = new Intent(SDMainActivity.this, SDTableActivity.class);
                     i.putExtra("MakeButtons", true);
                     startActivity(i);
-                }else if (position == 2){ // Multiple Insterstitial Request
+                } else if (position == 2) { // Multiple Insterstitial Request
                     startActivity(new Intent(SDMainActivity.this, SDFullPageAdActivity.class));
-                }else if (position == 3){ // Banner for all screens
+                } else if (position == 3) { // Banner for all screens
                     startActivity(new Intent(SDMainActivity.this, SDBannerActivity.class));
-                }else if (position == 4){ // Simple Video Player
+                } else if (position == 4) { // Banner Inside s scroll view
+                    startActivity(new Intent(SDMainActivity.this, SDBannerInScrollActivity.class));
+                } else if (position == 5) { // Simple Video Player
                     startActivity(new Intent(SDMainActivity.this, SimpleVideoActivity.class));
+                } else if (position == 6) {
+                    if (tabletSize) {
+                        // Grid view for Tablet
+                        startActivity(new Intent(SDMainActivity.this, SDGridViewActivity.class));
+                    }else{
+                        // Feed Ad Customization for phone
+                        startActivity(new Intent(SDMainActivity.this, SDAppearanceActivity.class));
+                    }
                 }
             }
         });
+
     }
 
 
@@ -81,6 +99,7 @@ public class SDMainActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

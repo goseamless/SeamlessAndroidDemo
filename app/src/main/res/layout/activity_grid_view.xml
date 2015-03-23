@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="mobilike.example.com.seamlessandroiddemo.SDGridViewActivity">
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:columnWidth="320dp"
+        android:minHeight="250dp"
+        android:id="@+id/gridView"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="16dp"
+        android:background="@color/grey"
+        android:padding="16dp"/>
+
+</RelativeLayout>

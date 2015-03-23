@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="seamless-2.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/MMSDK-5.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/mopub-volley-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/AudienceNetwork.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/mfXerces.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.goseamless/seamless/2.0.0/libs/liverail-admanager.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

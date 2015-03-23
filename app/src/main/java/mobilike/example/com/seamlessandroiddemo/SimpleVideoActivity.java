@@ -9,14 +9,9 @@ import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.liverail.library.AdView;
-import com.liverail.library.events.VPAIDAdErrorEvent;
-import com.liverail.library.events.VPAIDEvent;
-import com.liverail.library.events.VPAIDEventListener;
 import com.mobilike.seamless.SeamlessPlayerManager;
 import com.mobilike.seamless.listener.SeamlessPlayerManagerListener;
-
-import java.util.Map;
+import com.mobilike.seamless.player.org.nexage.sourcekit.vast.VASTPlayer;
 
 
 public class SimpleVideoActivity extends ActionBarActivity {
@@ -36,68 +31,38 @@ public class SimpleVideoActivity extends ActionBarActivity {
         simpleVideoView = (VideoView) findViewById(R.id.simple_video_view);
 
         SeamlessPlayerManagerListener seamlessPlayerManagerListener = new SeamlessPlayerManagerListener() {
-
             @Override
-            public void onAdPrepared(final AdView adView,final Map<String, Object> params) {
-
-                VPAIDEventListener onAdLoaded = new VPAIDEventListener() {
-
-                    @Override
-                    public void onEvent(VPAIDEvent event) {
-                        if (util.activityIsAlive()) {
-                            // Create container View to hold the AdView
-                            // Remove all views from the container and add the AdView
-                            videoLayout.removeAllViews();
-                            videoLayout.addView(adView);
-
-                            Toast.makeText(getApplicationContext(), "Video ad loaded", Toast.LENGTH_SHORT).show();
-                            // Then start the video ad
-                            adView.startAd();
-                        }
-                    }
-                };
-
-                VPAIDEventListener onAdStopped = new VPAIDEventListener() {
-
-                    @Override
-                    public void onEvent(VPAIDEvent event) {
-                        if (util.activityIsAlive()) {
-                            // Ad Stopped
-                            videoLayout.removeAllViews();
-                            videoLayout.addView(simpleVideoView);
-                            startVideo();
-                        }
-                    }
-                };
-
-                VPAIDEventListener onAdError = new VPAIDEventListener() {
-
-                    @Override
-                    public void onEvent(VPAIDEvent event) {
-                        if (util.activityIsAlive()) {
-                            // Error
-                            Toast.makeText(getApplicationContext(), "Video ad error", Toast.LENGTH_SHORT).show();
-                            startVideo();
-                        }
-                    }
-                };
-
-                // Add the listeners that you defined above
-                adView.addEventListener(VPAIDEvent.AdLoaded, onAdLoaded);
-                adView.addEventListener(VPAIDEvent.AdStopped, onAdStopped);
-                adView.addEventListener(VPAIDAdErrorEvent.AdError, onAdError);
-
-                // Initialize the ad
-                adView.initAd(params);
+            public void onAdReady(VASTPlayer vastPlayer) {
+                Toast.makeText(getApplicationContext(), "Video ad is ready", Toast.LENGTH_SHORT).show();
+                if (vastPlayer != null) {
+                    vastPlayer.play();
+                }
             }
 
             @Override
-            public void onAdFailed(String error) {
+            public void onAdFailed(String s) {
                 Toast.makeText(getApplicationContext(), "Video ad failed", Toast.LENGTH_SHORT).show();
                 startVideo();
             }
 
+            @Override
+            public void onAdClicked() {
+
+            }
+
+            @Override
+            public void onAdCompleted() {
+                Toast.makeText(getApplicationContext(), "Video ad completed", Toast.LENGTH_SHORT).show();
+                startVideo();
+            }
+
+            @Override
+            public void onAdDismissed() {
+                Toast.makeText(getApplicationContext(), "Video ad dismissed", Toast.LENGTH_SHORT).show();
+                startVideo();
+            }
         };
+
         SeamlessPlayerManager seamlessPlayerManager = new SeamlessPlayerManager.Builder(this)
                 .entity("simple-video-player")
                 .listener(seamlessPlayerManagerListener)

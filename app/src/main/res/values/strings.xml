@@ -9,5 +9,8 @@
     <string name="title_activity_sdtable">SDTableActivity</string>
     <string name="title_activity_sdfull_page_ad">SDFullPageAdActivity</string>
     <string name="title_activity_sdbanner">SDBannerActivity</string>
+    <string name="title_activity_sdmre">SDMREActivity</string>
+    <string name="title_activity_sdappearance">SDAppearanceActivity</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
 
 </resources>
